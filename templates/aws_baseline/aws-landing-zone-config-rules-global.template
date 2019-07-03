@@ -5,14 +5,14 @@ Parameters:
   EnableRootMfaRule:
     Type: String
     Description: "Enables the AWS managed root-account-mfa-enabled config rule. To disable, change the parameter value to false."
-    Default: true
+    Default: false
     AllowedValues:
     - true
     - false
   EnableIamPasswordPolicyRule:
     Type: String
     Description: "Enables the AWS managed iam-password-policy config rule. To disable, change the parameter value to false."
-    Default: true
+    Default: false
     AllowedValues:
     - true
     - false

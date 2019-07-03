@@ -5,28 +5,28 @@ Parameters:
   EnableEncryptedVolumesRule:
     Type: String
     Description: "Enables the AWS managed encrypted-volumes config rule. To disable, change the parameter value to false."
-    Default: true
+    Default: false
     AllowedValues:
     - true
     - false
   EnableRdsEncryptionRule:
     Type: String
     Description: "Enables the AWS managed rds-storage-encrypted config rule. To disable, change the parameter value to false."
-    Default: true
+    Default: false
     AllowedValues:
     - true
     - false
   EnableS3PublicReadRule:
     Type: String
     Description: "Enables the AWS managed s3-bucket-public-read-prohibited config rule. To disable, change the parameter value to false."
-    Default: true
+    Default: false
     AllowedValues:
     - true
     - false
   EnableS3PublicWriteRule:
     Type: String
     Description: "Enables the AWS managed s3-bucket-public-write-prohibited config rule. To disable, change the parameter value to false."
-    Default: true
+    Default: false
     AllowedValues:
     - true
     - false
@@ -40,14 +40,14 @@ Parameters:
   EnableRestrictedCommonPortsRule:
     Type: String
     Description: "Enables the AWS managed restricted-common-ports config rule. To disable, change the parameter value to false."
-    Default: true
+    Default: false
     AllowedValues:
     - true
     - false
   EnableRestrictedSshRule:
     Type: String
     Description: "Enables the AWS managed restricted-ssh config rule. To disable, change the parameter value to false."
-    Default: true
+    Default: false
     AllowedValues:
     - true
     - false

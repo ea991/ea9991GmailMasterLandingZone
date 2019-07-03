@@ -33,21 +33,8 @@ organizational_units:
             deploy_method: stack_set
             # This SNS Topic needs to be deployed in ALL the regions where AWS Config service is enabled. (See baseline_resources: EnableConfig)
             regions:
-              - ap-northeast-1
-              - ap-northeast-2
-              - ap-south-1
-              - ap-southeast-1
-              - ap-southeast-2
-              - ca-central-1
-              - eu-central-1
-              - eu-west-1
-              - eu-west-2
-              - eu-west-3
-              - sa-east-1
               - us-east-1
               - us-east-2
-              - us-west-1
-              - us-west-2
             ssm_parameters:
               - name: /org/primary/sns_topic_arn
                 value: $[output_TopicARN]
@@ -58,21 +45,8 @@ organizational_units:
             parameter_file: parameters/core_accounts/aws-landing-zone-guardduty-master.json
             deploy_method: stack_set
             regions:
-              - ap-northeast-1
-              - ap-northeast-2
-              - ap-south-1
-              - ap-southeast-1
-              - ap-southeast-2
-              - ca-central-1
-              - eu-central-1
-              - eu-west-1
-              - eu-west-2
-              - eu-west-3
-              - sa-east-1
               - us-east-1
               - us-east-2
-              - us-west-1
-              - us-west-2
       # Logging account
       - name: log-archive
         email: ea9991b@gmail.com
@@ -205,21 +179,8 @@ baseline_resources:
     parameter_file: parameters/aws_baseline/aws-landing-zone-enable-config.json
     deploy_method: stack_set
     regions:
-      - ap-northeast-1
-      - ap-northeast-2
-      - ap-south-1
-      - ap-southeast-1
-      - ap-southeast-2
-      - ca-central-1
-      - eu-central-1
-      - eu-west-1
-      - eu-west-2
-      - eu-west-3
-      - sa-east-1
       - us-east-1
       - us-east-2
-      - us-west-1
-      - us-west-2
 
     # This template deploys the Config Rules that monitor the Global resources i.e. IAM
     # It needs to be deployed in Home region ONLY
@@ -243,21 +204,8 @@ baseline_resources:
     parameter_file: parameters/aws_baseline/aws-landing-zone-config-rules.json
     deploy_method: stack_set
     regions:
-      - ap-northeast-1
-      - ap-northeast-2
-      - ap-south-1
-      - ap-southeast-1
-      - ap-southeast-2
-      - ca-central-1
-      - eu-central-1
-      - eu-west-1
-      - eu-west-2
-      - eu-west-3
-      - sa-east-1
       - us-east-1
       - us-east-2
-      - us-west-1
-      - us-west-2
 
   - name: EnableNotifications
     baseline_products:
